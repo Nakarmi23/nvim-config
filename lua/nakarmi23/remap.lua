@@ -27,7 +27,9 @@ vim.keymap.set("v", "jk", "<Esc>")
 vim.keymap.set("v", "kj", "<Esc>")
 
 -- format current buffer
-vim.keymap.set("n", "<leader>f", vim.cmd.Prettier)
+vim.keymap.set("n", "<leader>f", function()
+  vim.lsp.buf.format()
+end)
 
 -- find and replace all
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left>")
