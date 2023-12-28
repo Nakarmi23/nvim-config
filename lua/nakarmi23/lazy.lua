@@ -44,5 +44,9 @@ require("lazy").setup({
   { 'williamboman/mason-lspconfig.nvim' },
   { 'windwp/nvim-ts-autotag' },
   { 'windwp/nvim-autopairs' },
-  { 'lewis6991/gitsigns.nvim' }
+  { 'lewis6991/gitsigns.nvim' },
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+  },
 })
