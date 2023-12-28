@@ -21,7 +21,8 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- exit insert mode
-vim.keymap.set("i", "jh", "<Esc>")
+vim.keymap.set("i", "jk", "<Esc>")
+vim.keymap.set("i", "kj", "<Esc>")
 
 -- format current buffer
 vim.keymap.set("n", "<leader>f", function()
