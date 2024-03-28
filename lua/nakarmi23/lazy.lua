@@ -68,5 +68,8 @@ require("lazy").setup({
       { "<c-l>",  "<cmd><C-U>TmuxNavigateRight<cr>" },
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
+  },
+  {
+    'codota/tabnine-nvim', build = "./dl_binaries.sh"
   }
 })
