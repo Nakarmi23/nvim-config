@@ -14,7 +14,7 @@ require('mason').setup({
 require('mason-lspconfig').setup({
   -- Replace the language servers listed here
   -- with the ones you want to install
-  ensure_installed = { 'tsserver', 'eslint', 'lua_ls' },
+  ensure_installed = { 'tsserver', 'eslint', 'lua_ls', 'tailwindcss', 'cssls', 'html', 'mdx_analyzer', 'sqlls', 'yamlls' },
   handlers = {
     lsp_zero.default_setup,
   },
