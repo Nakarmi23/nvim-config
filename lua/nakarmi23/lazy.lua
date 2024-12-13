@@ -48,13 +48,18 @@ require("lazy").setup({
             and not vim.fn.isdirectory(bufname) -- Ignore directories
       end, vim.api.nvim_list_bufs())
 
-      -- Start Alpha.nvim only if no files or buffers are open
-      if #vim.fn.argv() == 0 and #listed_buffers == 0 or vim.fn.isdirectory(vim.fn.argv()[1]) == 1 then
+      -- Start Alpha.nvim only if no files or buffers are open and no valid arguments are passed
+      if #vim.fn.argv() == 0 and #listed_buffers == 0 then
         require("alpha").start()
         -- Open Neo-tree after Alpha starts
         vim.defer_fn(function()
           vim.cmd("Neotree show")
         end, 100) -- Small delay to ensure Alpha loads first
+      elseif vim.fn.argv(0) and vim.fn.isdirectory(vim.fn.argv()[1]) == 1 then
+        -- Open the directory in Neo-tree if a directory is passed
+        vim.defer_fn(function()
+          vim.cmd("Neotree show")
+        end, 100)
       end
     end,
     lazy = false,
