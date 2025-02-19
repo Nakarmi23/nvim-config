@@ -129,9 +129,6 @@ require("lazy").setup({
     lazy = false,
   },
   {
-    'codota/tabnine-nvim', build = "./dl_binaries.sh"
-  },
-  {
     "folke/trouble.nvim",
     opts = {}, -- for default options, refer to the configuration section for custom setup.
     cmd = "Trouble",
