@@ -164,5 +164,10 @@ require("lazy").setup({
         desc = "Quickfix List (Trouble)",
       },
     },
+  },
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    config = true
   }
 })

@@ -42,7 +42,7 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set('n', '<leader>rn', function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set('i', '<C-h>', function() vim.lsp.buf.signature_help() end, opts)
 
-  lsp_zero.buffer_autoformat()
+  -- lsp_zero.buffer_autoformat()
 end)
 
 lsp_zero.setup()
