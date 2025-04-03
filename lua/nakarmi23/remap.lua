@@ -40,5 +40,19 @@ vim.keymap.set("n", '<C-j>', ':wincmd j<CR>')
 vim.keymap.set("n", '<C-h>', ':wincmd h<CR>')
 vim.keymap.set("n", '<C-l>', ':wincmd l<CR>')
 
+-- Resize Vim splits using Ctrl + Shift + hjkl
+vim.keymap.set("n", "<leader>sh", ":vertical resize -2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>sl", ":vertical resize +2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>sj", ":resize -2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>sk", ":resize +2<CR>", { noremap = true, silent = true })
+
+-- Simplyfy splits
+-- Close window with Leader + q
+vim.keymap.set('n', '<leader>q', ':close<CR>', { noremap = true, silent = true })
+-- Open a new horizontal split with Leader + _
+vim.keymap.set('n', '<leader>_', ':split<CR>', { noremap = true, silent = true })
+-- Open a new vertical split with Leader + |
+vim.keymap.set('n', '<leader>|', ':vsplit<CR>', { noremap = true, silent = true })
+
 -- toggle tree
 -- vim.keymap.set("n", "<C-b>", vim.cmd.NvimTreeToggle)
