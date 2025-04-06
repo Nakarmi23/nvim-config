@@ -27,9 +27,9 @@ vim.keymap.set("v", "jk", "<Esc>")
 vim.keymap.set("v", "kj", "<Esc>")
 
 -- format current buffer
-vim.keymap.set("n", "<leader>f", function()
-  vim.lsp.buf.format()
-end)
+-- vim.keymap.set("n", "<leader>f", function()
+--   vim.lsp.buf.format()
+-- end)
 
 -- find and replace all
 vim.keymap.set("n", "<leader>sr", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left>")
@@ -41,10 +41,10 @@ vim.keymap.set("n", '<C-h>', ':wincmd h<CR>')
 vim.keymap.set("n", '<C-l>', ':wincmd l<CR>')
 
 -- Resize Vim splits using Ctrl + Shift + hjkl
-vim.keymap.set("n", "<leader>sh", ":vertical resize -2<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>sl", ":vertical resize +2<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>sj", ":resize -2<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>sk", ":resize +2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-M-h>", ":vertical resize -2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-M-l>", ":vertical resize +2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-M-j>", ":resize -2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-M-k>", ":resize +2<CR>", { noremap = true, silent = true })
 
 -- Simplyfy splits
 -- Close window with Leader + q
